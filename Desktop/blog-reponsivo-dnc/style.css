@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #F5F5F5;
+  color: #1A1A1A;
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+.header {
+  background: #02A28F;
+  padding: 32px 0;
+}
+
+.logo {
+  color: #FFF;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* LAYOUT */
+.layout {
+  display: flex;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.conteudo {
+  flex: 2;
+}
+
+.sidebar {
+  flex: 1;
+}
+
+/* BANNER */
+.banner {
+  height: 396px;
+  border-radius: 16px;
+  display: flex;
+  align-items: flex-end;
+  padding: 48px;
+
+  background-image:
+    linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2)),
+    url("imagens/imgsuperior.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-texto {
+  color: white;
+  max-width: 600px;
+}
+
+.banner-categoria {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.banner-titulo {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.banner-autor {
+  font-size: 14px;
+}
+
+/* TOPO POSTS */
+.posts-topo {
+  margin: 48px 0 24px;
+  background: #02A28F;
+  padding: 16px 24px;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.posts-topo a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-conteudo {
+  padding: 24px;
+}
+
+.categoria {
+  background: #02A28F;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.autor {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.data {
+  font-size: 12px;
+  color: #777;
+}
+
+/* SIDEBAR */
+.box {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+
+.box-titulo {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.post-popular {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.post-popular img {
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.post-popular h4 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.post-popular span {
+  font-size: 12px;
+  color: #777;
+}
+
+.categorias {
+  list-style: none;
+}
+
+.categorias li {
+  margin-bottom: 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 60px;
+  background: #02A28F;
+  padding: 28px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1024px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .banner {
+    height: 300px;
+    padding: 32px;
+  }
+
+  .banner-titulo {
+    font-size: 28px;
+  }
+}
+/* DESKTOP GRANDE - padrão já definido acima */
+
+/* DESKTOP MÉDIO / TABLET (1024px até 769px) */
+@media (max-width: 1024px) {
+  .layout {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .banner {
+    height: 300px;
+    padding: 32px;
+  }
+
+  .banner-titulo {
+    font-size: 28px;
+  }
+}
+
+/* TABLET PEQUENO / CELULAR (768px até 481px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .banner {
+    height: 250px;
+    padding: 24px;
+  }
+
+  .banner-titulo {
+    font-size: 24px;
+  }
+
+  .banner-categoria {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .post-popular img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .posts-topo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+/* CELULAR PEQUENO / TELAS VERTICAIS (480px ou menos) */
+@media (max-width: 480px) {
+  .banner {
+    height: 200px;
+    padding: 16px;
+  }
+
+  .banner-titulo {
+    font-size: 20px;
+  }
+
+  .banner-texto {
+    max-width: 100%;
+  }
+
+  .card-conteudo {
+    padding: 16px;
+  }
+
+  .cards {
+    gap: 12px;
+  }
+
+  .post-popular {
+    gap: 12px;
+  }
+}
